@@ -21,6 +21,7 @@ namespace ScheduleViewer
 {
     public partial class Schedule_Viewer : Form
     {
+        private const string AppVersion = "1.1";
         private string excelFilePath = @"K:\NewTestRequests\Default\Ply_Dyno_Schedule.xlsx"; // Set your Excel path
         private Timer refreshTimer;
         private DataTable detailsTable = new DataTable();
