@@ -166,13 +166,13 @@ namespace ScheduleViewer
                 {
                     LoadDetails(cmbDyno.SelectedItem.ToString(), preserveSearch: true);
                 }
-                this.Text = $"Schedule Viewer v1.0 - Last Updated: {wt}";
+                this.Text = $"Schedule Viewer v{AppVersion} - Last Updated: {wt}";
                 CheckAndSendEmailIfUpdated();
             }
             catch (Exception ex) when (ex is IOException || ex is UnauthorizedAccessException)
             {
                 _isDriveDisconnected = true;
-                this.Text = "Schedule Viewer v1.0 - Drive disconnected - retrying...";
+                this.Text = $"Schedule Viewer v{AppVersion} - Drive disconnected - retrying...";
                 // Grid data is untouched — last loaded data remains visible
             }
         }
